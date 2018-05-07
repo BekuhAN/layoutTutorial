@@ -1,0 +1,77 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+/*==========  user style  ==========*/
+body
+	color: #333
+
+*:focus, *:active, *:link, *:visited
+	text-decoration: none
+
+.sidebar
+	padding-top: 30px
+	background: $bg-color-1
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	width: 299px
+	border-right: 1px solid $border-color-1
+	z-index: 9999
+
+.main-content
+	padding-top: 30px
+	padding-left: 300px
+	.container
+		padding-right: 100px
+
+.sidebar-title
+	text-transform: uppercase
+	font-weight: bold
+	text-align: center
+	font-size: 20px
+	margin-bottom: 30px
+
+.main-menu
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+		a
+			color: #333
+			display: block
+			padding: 10px 0px
+			text-align: center
+			position: relative
+			transition: .2s
+			&:hover
+				color: #fff
+				text-decoration: none
+				&:after
+					height: 100%
+			&::after
+				content: ""
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				height: 0
+				width: 100%
+				background: #888
+				z-index: -1
+				transition: .3s
+		.sub
+			ul
+				list-style: none
+				padding: 0
+				background: darken($bg-color-1, 5%)
+				height: 0
+				overflow: hidden
+		a.active
+			background: #888
+			color: #fff
+
+/*==========  user style  ==========*/
+
+@import "media" // Always at the end
