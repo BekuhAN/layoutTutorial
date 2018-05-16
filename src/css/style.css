@@ -1828,7 +1828,7 @@ body {
   color: #333;
 }
 
-*:focus, *:active, *:link, *:visited {
+a:focus, a:active, a:link, a:visited {
   text-decoration: none;
 }
 
@@ -1846,7 +1846,7 @@ body {
 
 .main-content {
   padding-top: 30px;
-  padding-left: 300px;
+  padding-left: 350px;
 }
 
 .main-content .container {
