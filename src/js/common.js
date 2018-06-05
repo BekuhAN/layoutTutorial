@@ -33,4 +33,36 @@ $(document).ready(function () {
 			}
 		}
 	});
+	$('a[href^="#b"]').bind('click.smoothscroll',function (e) {
+		e.preventDefault();
+ 
+		var target = this.hash,
+		$target = $(target);
+ 
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+		}, 1500, 'swing', function () {
+			window.location.hash = target;
+		});
+	});
+	$('.accordion-item .heading').on('click', function(e) {
+    e.preventDefault();
+
+    // Add the correct active class
+    if($(this).closest('.accordion-item').hasClass('active')) {
+        // Remove active classes
+        $('.accordion-item').removeClass('active');
+    } else {
+        // Remove active classes
+        $('.accordion-item').removeClass('active');
+
+        // Add the active class
+        $(this).closest('.accordion-item').addClass('active');
+    }
+
+    // Show the content
+    var $content = $(this).next();
+    $content.slideToggle(100);
+    $('.accordion-item .content').not($content).slideUp('fast');
+});
 });

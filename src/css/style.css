@@ -2375,6 +2375,124 @@ h1, h2, h3, h4 {
   padding: 10px 15px;
 }
 
+.alphabet {
+  text-align: center;
+  font-size: 18px;
+}
+
+.alphabet a {
+  color: #999;
+  transition: .2s;
+  padding: 0px 5px;
+  font-weight: bold;
+  position: relative;
+}
+
+.alphabet a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #222;
+  left: 0;
+  opacity: 0;
+  transition: .2s;
+}
+
+.alphabet a:hover {
+  color: #222;
+}
+
+.alphabet a:hover:after {
+  opacity: 1;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.accordion-item {
+  position: relative;
+}
+
+.accordion-item.active .heading {
+  color: #abb98c;
+}
+
+.accordion-item.active .icon {
+  background: #fefefe;
+}
+
+.accordion-item.active .icon::before {
+  background: #abb98c;
+}
+
+.accordion-item.active .icon::after {
+  width: 0;
+}
+
+.accordion-item .heading {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #6b7a4d;
+  font-weight: 700;
+  font-size: 1rem;
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 4rem;
+  transition: 0.3s ease-in-out;
+}
+
+.accordion-item .heading:hover {
+  color: #abb98c;
+}
+
+.accordion-item .heading:hover .icon::before, .accordion-item .heading:hover .icon::after {
+  background: #abb98c;
+}
+
+.accordion-item .icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #fefefe;
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+
+.accordion-item .icon::before, .accordion-item .icon::after {
+  content: "";
+  width: 1.25rem;
+  height: 0.25rem;
+  background: #6b7a4d;
+  position: absolute;
+  border-radius: 3px;
+  left: 50%;
+  top: 50%;
+  transition: 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+
+.accordion-item .icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  z-index: -1;
+}
+
+.accordion-item .content {
+  display: none;
+}
+
+.accordion-item .content p {
+  margin-top: 0;
+}
+
 /*==========  user style  ==========*/
 /*==========  Desktop First  ==========*/
 /*==========  Mobile First  ==========*/
