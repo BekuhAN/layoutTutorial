@@ -2276,6 +2276,10 @@ body {
   color: #333;
 }
 
+*:focus, *:active, *:link, *:visited {
+  outline: none;
+}
+
 a:focus, a:active, a:link, a:visited {
   text-decoration: none;
   outline: none;
@@ -2420,7 +2424,7 @@ h1, h2, h3, h4 {
 }
 
 .accordion-item.active .heading {
-  color: #abb98c;
+  color: #4b827a;
 }
 
 .accordion-item.active .icon {
@@ -2428,7 +2432,7 @@ h1, h2, h3, h4 {
 }
 
 .accordion-item.active .icon::before {
-  background: #abb98c;
+  background: #4b827a;
 }
 
 .accordion-item.active .icon::after {
@@ -2439,7 +2443,7 @@ h1, h2, h3, h4 {
   display: block;
   text-transform: uppercase;
   text-decoration: none;
-  color: #6b7a4d;
+  color: #4b827a;
   font-weight: 700;
   font-size: 1rem;
   position: relative;
@@ -2448,11 +2452,11 @@ h1, h2, h3, h4 {
 }
 
 .accordion-item .heading:hover {
-  color: #abb98c;
+  color: #8bc2ba;
 }
 
 .accordion-item .heading:hover .icon::before, .accordion-item .heading:hover .icon::after {
-  background: #abb98c;
+  background: #8bc2ba;
 }
 
 .accordion-item .icon {
@@ -2471,7 +2475,7 @@ h1, h2, h3, h4 {
   content: "";
   width: 1.25rem;
   height: 0.25rem;
-  background: #6b7a4d;
+  background: #4b827a;
   position: absolute;
   border-radius: 3px;
   left: 50%;
@@ -2491,6 +2495,57 @@ h1, h2, h3, h4 {
 
 .accordion-item .content p {
   margin-top: 0;
+}
+
+.btn {
+  display: block;
+  padding: 5px 0;
+  background: #f5f2f0;
+  width: 100px;
+  text-align: center;
+  border-radius: 3px;
+  transition: .2s;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #fff;
+  background: #ccbdb3;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.quest {
+  margin-bottom: 30px;
+  margin-left: 70px;
+}
+
+.quest-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.msg-ok {
+  padding: 5px 15px;
+  border-radius: 3px;
+  background: rgba(0, 150, 136, 0.1);
+  color: #004a43;
+  border: 1px solid #009688;
+}
+
+.msg-er {
+  padding: 5px 15px;
+  border-radius: 3px;
+  background: rgba(229, 57, 53, 0.1);
+  color: #b61b17;
+  border: 1px solid #e53935;
 }
 
 /*==========  user style  ==========*/

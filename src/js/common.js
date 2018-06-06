@@ -62,7 +62,29 @@ $(document).ready(function () {
 
     // Show the content
     var $content = $(this).next();
-    $content.slideToggle(100);
+    $content.slideToggle(700);
     $('.accordion-item .content').not($content).slideUp('fast');
 });
 });
+
+function questTypeOne(quest, answer) {
+	var qNumber = $('input:radio[name='+quest+']:checked');
+	var result = $('.'+quest+'-result');
+			result.empty();
+		if (qNumber.val() == answer) {
+			result.append('<span class="msg-ok">Правильно</span>');
+		} else {
+			result.append('<span class="msg-er">Не правильно</span>');
+		}
+};
+
+function questTypeTwo(quest, answer1, answer2) {
+	var qNumber = $('input:checkbox[name='+quest+']:checked');
+	var result = $('.'+quest+'-result');
+			result.empty();
+		if ((qNumber[0].value == answer1) && (qNumber[1].value == answer2)) {
+			result.append('<span class="msg-ok">Правильно</span>');
+		} else {
+			result.append('<span class="msg-er">Не правильно</span>');
+		}
+};
